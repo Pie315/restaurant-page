@@ -1,3 +1,6 @@
 import './style.css';
+import buildLanding from './home';
 
-console.log("TEST");
+console.log("TESTWATCH");
+
+buildLanding();
