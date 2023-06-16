@@ -1,3 +1,30 @@
+.clickable {
+    cursor: pointer
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.box {
+    background-color: salmon;
+    border: solid black 2px;
+    border-radius: 5px;
+}
+
+.title {
+    font-size: 45px;
+    color: salmon;
+    margin-bottom: 30px; 
+}
+
+.flexy {
+    display: flex;
+    justify-content: center;
+    gap: 30px
+}
+
 body {
-    background-color: black;
+    background-color: rgb(52, 31, 31);
 }

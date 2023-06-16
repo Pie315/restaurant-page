@@ -1,5 +1,10 @@
 function buildLanding() {
-    console.log("hello");
+    const container = document.querySelector("#content")
+    container.textContent = "TESTTEST"
+    console.log("Homerun")
+
+    
+
 }
 
 export default buildLanding;
