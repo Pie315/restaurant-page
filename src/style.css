@@ -28,3 +28,18 @@
 body {
     background-color: rgb(52, 31, 31);
 }
+
+#content {
+    flex-direction: column;
+    align-items: center;
+}
+
+.image {
+    width: 60vw;
+    height: auto;
+}
+
+button {
+    height: 70px;
+    width: 200px;
+}
