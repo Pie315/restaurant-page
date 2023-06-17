@@ -5,17 +5,21 @@ const buttonMaker = (selected) => {
 
     const content = document.querySelector("#content");
     const box = document.createElement("div");
-    box.classList.add([".flexy", ".box"]);
+    box.classList.add("flexy");
     const home = document.createElement("button");
     const menu = document.createElement("button");
     const contact = document.createElement("button");
 
     home.textContent = "home"
+    home.id = "home"
     menu.textContent = "menu"
+    menu.id = "menu"
     contact.textContent = "contact"
+    contact.id = "contact"
 
     const tabs = [home, menu, contact];
     tabs.forEach((tab) => {
+        tab.classList.add("clickable")
         box.appendChild(tab)
     })
 
@@ -30,13 +34,10 @@ const buttonMaker = (selected) => {
             contact.classList.add("current")
             break
         default:
-            console.log("error");
+            console.log(home);
     }
     content.appendChild(box);
 }
 
-
-console.log("TESTWATCH");
-
-buttonMaker()
+buttonMaker("home")
 buildLanding();
