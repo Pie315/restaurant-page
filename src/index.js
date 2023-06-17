@@ -1,5 +1,5 @@
 import './style.css';
-import buildLanding from './home';
+import buildHome from './home';
 
 const buttonMaker = (selected) => {
 
@@ -21,6 +21,23 @@ const buttonMaker = (selected) => {
     tabs.forEach((tab) => {
         tab.classList.add("clickable")
         box.appendChild(tab)
+        tab.addEventListener("click", () => {
+            const targetPage = tab.textContent;
+            switch (targetPage) {
+                case "home":
+                    console.log("home")
+                    buildHome()
+                    break
+                case "menu":
+                    console.log("menu")
+                    break
+                case "contact":
+                    console.log("contact")
+                    break
+                default:
+                    console.log("error")
+            }
+        });
     })
 
     switch(selected) {
@@ -39,5 +56,7 @@ const buttonMaker = (selected) => {
     content.appendChild(box);
 }
 
+
+
 buttonMaker("home")
-buildLanding();
+buildHome();

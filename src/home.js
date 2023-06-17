@@ -2,7 +2,7 @@ import ingredients from './Ingredients.png'
 
 
 
-function buildLanding() {
+function buildHome() {
     const image = new Image();
     image.src = ingredients
 
@@ -12,8 +12,6 @@ function buildLanding() {
 
     container.appendChild(image)
 
-    
-
 }
 
-export default buildLanding;
+export default buildHome;
