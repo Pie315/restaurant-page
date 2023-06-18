@@ -36,8 +36,10 @@ body {
 }
 
 .image {
-    width: 60vw;
+    width: 50vw;
     height: auto;
+    border: solid black 2px;
+    border-radius: 15px;
 }
 
 button {

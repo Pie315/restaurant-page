@@ -1,8 +1,19 @@
 import './style.css';
 import buildHome from './home';
+import buildMenu from './menu';
+
+function resetPage() {
+    const content = document.querySelector("#content")
+    const contents = document.querySelector(".resetable")
+    if (contents == null) {
+        return
+    }
+    content.removeChild(contents)
+}
 
 const buttonMaker = (selected) => {
 
+    // Creation of all of the button and boilerplate
     const content = document.querySelector("#content");
     const box = document.createElement("div");
     box.classList.add("flexy");
@@ -10,13 +21,15 @@ const buttonMaker = (selected) => {
     const menu = document.createElement("button");
     const contact = document.createElement("button");
 
-    home.textContent = "home"
-    home.id = "home"
-    menu.textContent = "menu"
-    menu.id = "menu"
-    contact.textContent = "contact"
-    contact.id = "contact"
+    // Addition of id's and text to buttons
+    home.textContent = "home";
+    home.id = "home";
+    menu.textContent = "menu";
+    menu.id = "menu";
+    contact.textContent = "contact";
+    contact.id = "contact";
 
+    // Event listener and button layout
     const tabs = [home, menu, contact];
     tabs.forEach((tab) => {
         tab.classList.add("clickable")
@@ -25,14 +38,14 @@ const buttonMaker = (selected) => {
             const targetPage = tab.textContent;
             switch (targetPage) {
                 case "home":
-                    console.log("home")
+                    resetPage()
                     buildHome()
                     break
                 case "menu":
-                    console.log("menu")
+                    resetPage()
+                    buildMenu()
                     break
                 case "contact":
-                    console.log("contact")
                     break
                 default:
                     console.log("error")
@@ -57,6 +70,4 @@ const buttonMaker = (selected) => {
 }
 
 
-
 buttonMaker("home")
-buildHome();
