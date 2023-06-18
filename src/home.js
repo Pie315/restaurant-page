@@ -15,8 +15,6 @@ function buildHome() {
     pageInner.appendChild(image)
 
 
-
-
     const final = document.querySelector("#content")
     final.appendChild(pageInner)
 }

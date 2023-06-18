@@ -2,7 +2,7 @@
 
 
 
-function buildMenu() {
+function buildContacts() {
     const pageInner = document.createElement("div")
     pageInner.classList.add("home")
     pageInner.classList.add("resetable")
@@ -14,7 +14,7 @@ function buildMenu() {
 
     //pageInner.appendChild(image)
 
-    pageInner.textContent = "Here's what's on the menu"
+    pageInner.textContent = "Where to find us"
 
 
 
@@ -22,4 +22,4 @@ function buildMenu() {
     final.appendChild(pageInner)
 }
 
-export default buildMenu;
+export default buildContacts;

@@ -1,6 +1,7 @@
 import './style.css';
 import buildHome from './home';
 import buildMenu from './menu';
+import buildContacts from './contact';
 
 function resetPage() {
     const content = document.querySelector("#content")
@@ -11,7 +12,7 @@ function resetPage() {
     content.removeChild(contents)
 }
 
-const buttonMaker = (selected) => {
+const buttonMaker = () => {
 
     // Creation of all of the button and boilerplate
     const content = document.querySelector("#content");
@@ -22,11 +23,11 @@ const buttonMaker = (selected) => {
     const contact = document.createElement("button");
 
     // Addition of id's and text to buttons
-    home.textContent = "home";
+    home.textContent = "Home";
     home.id = "home";
-    menu.textContent = "menu";
+    menu.textContent = "Menu";
     menu.id = "menu";
-    contact.textContent = "contact";
+    contact.textContent = "Contact";
     contact.id = "contact";
 
     // Event listener and button layout
@@ -37,37 +38,35 @@ const buttonMaker = (selected) => {
         tab.addEventListener("click", () => {
             const targetPage = tab.textContent;
             switch (targetPage) {
-                case "home":
+                case "Home":
                     resetPage()
                     buildHome()
+                    home.classList.add("current")
+                    menu.classList.remove("current")
+                    contact.classList.remove("current")
                     break
-                case "menu":
+                case "Menu":
                     resetPage()
                     buildMenu()
+                    menu.classList.add("current")
+                    home.classList.remove("current")
+                    contact.classList.remove("current")
                     break
-                case "contact":
+                case "Contact":
+                    resetPage()
+                    buildContacts()
+                    contact.classList.add("current")
+                    menu.classList.remove("current")
+                    home.classList.remove("current")
                     break
                 default:
-                    console.log("error")
+                    console.log("errors")
             }
         });
     })
-
-    switch(selected) {
-        case "home":
-            home.classList.add("current")
-            break
-        case "menu":
-            menu.classList.add("current")
-            break
-        case "contact":
-            contact.classList.add("current")
-            break
-        default:
-            console.log(home);
-    }
     content.appendChild(box);
 }
 
 
-buttonMaker("home")
+buttonMaker()
+buildHome()

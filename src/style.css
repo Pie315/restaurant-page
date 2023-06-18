@@ -1,3 +1,11 @@
+:root {
+    --text: #f3f7f7;
+    --background: #141f1f;
+    --primary-button: #4398b1;
+    --secondary-button: #04090b;
+    --accent: #3c889f;
+}
+
 .clickable {
     cursor: pointer
 }
@@ -8,15 +16,16 @@
 }
 
 .box {
-    background-color: salmon;
+    background-color: var(--accent);
     border: solid black 2px;
-    border-radius: 5px;
+    border-radius: 15px;
     padding: 30px 0 30px 0;
+    margin: 0 25px 0 25px;
 }
 
 .title {
     font-size: 45px;
-    color: salmon;
+    color: var(--text);
     margin-bottom: 30px; 
 }
 
@@ -27,7 +36,7 @@
 }
 
 body {
-    background-color: rgb(52, 31, 31);
+    background-color: var(--background);
 }
 
 #content {
@@ -44,12 +53,13 @@ body {
 
 button {
     height: 70px;
-    width: 200px;
-    background-color: whitesmoke;
+    width: clamp(150px, 1fr, min-content);
+    background-color: var(--secondary-button);
     border-radius: 5px;
-    color: black;
+    color: var(--text);
+    font-size: 20pt;
 }
 
 .current {
-    background-color: green;
+    background-color: var(--primary-button);
 }
