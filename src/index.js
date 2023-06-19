@@ -32,6 +32,7 @@ const buttonMaker = () => {
 
     // Event listener and button layout
     const tabs = [home, menu, contact];
+    home.classList.add("current")
     tabs.forEach((tab) => {
         tab.classList.add("clickable")
         box.appendChild(tab)

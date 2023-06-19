@@ -6,6 +6,7 @@ function buildHome() {
     const pageInner = document.createElement("div")
     pageInner.classList.add("home")
     pageInner.classList.add("resetable")
+    pageInner.id = "frick"
     
     const image = new Image();
     image.src = ingredients

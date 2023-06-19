@@ -1,8 +1,13 @@
+.temp {
+    --secondary-button: #04090b;
+
+}
+
 :root {
     --text: #f3f7f7;
     --background: #141f1f;
     --primary-button: #4398b1;
-    --secondary-button: #04090b;
+    --secondary-button: #183845;
     --accent: #3c889f;
 }
 
@@ -19,8 +24,8 @@
     background-color: var(--accent);
     border: solid black 2px;
     border-radius: 15px;
-    padding: 30px 0 30px 0;
-    margin: 0 25px 0 25px;
+    padding: 30px 0;
+    margin: 0 200px;
 }
 
 .title {
@@ -37,6 +42,13 @@
 
 body {
     background-color: var(--background);
+}
+
+#frick {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 100px;
 }
 
 #content {
@@ -58,6 +70,11 @@ button {
     border-radius: 5px;
     color: var(--text);
     font-size: 20pt;
+    border: none;
+}
+
+button:hover {
+    filter: hue-rotate(270deg);
 }
 
 .current {
