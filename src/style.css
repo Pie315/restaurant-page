@@ -52,7 +52,7 @@ body {
 }
 
 button {
-    height: 70px;
+    height: 50px;
     width: clamp(150px, 1fr, min-content);
     background-color: var(--secondary-button);
     border-radius: 5px;
